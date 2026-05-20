@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Clínica Elite - Odontologia Integrada | Dentista no Canindé SP</title>
+
+  <meta name="description" content="Clínica Elite - Odontologia Integrada no Canindé, São Paulo. Implantes, estética dental, clareamento, ortodontia e odontologia preventiva." />
+  <meta name="keywords" content="dentista Canindé, clínica odontológica São Paulo, implantes dentários, clareamento dental, ortodontia, estética dental" />
+  <meta name="author" content="Clínica Elite - Odontologia Integrada" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      color: #172433;
+      background: #fff;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(92%, 1180px);
+      margin: auto;
+    }
+
+    header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 1000;
+      background: rgba(255, 255, 255, .92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(9, 44, 76, .08);
+    }
+
+    .header-content {
+      height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 900;
+      color: #082b49;
+      letter-spacing: .2px;
+    }
+
+    .logo span {
+      color: #b78a2c;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 14px;
+      font-weight: 700;
+      color: #082b49;
+    }
+
+    nav a:hover {
+      color: #b78a2c;
+    }
+
+    .nav-cta {
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: #082b49;
+      color: #fff;
+    }
+
+    .menu-btn {
+      display: none;
+      color: #082b49;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 100vh;
+      padding: 132px 0 80px;
+      color: #fff;
+      position: relative;
+      background:
+        linear-gradient(110deg, rgba(6, 31, 53, .94) 0%, rgba(8, 43, 73, .82) 48%, rgba(6, 31, 53, .25) 100%),
+        url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1800&q=85");
+      background-size: cover;
+      background-position: center;
+      isolation: isolate;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1px;
+      height: 120px;
+      background: #fff;
+      clip-path: ellipse(70% 70% at 50% 100%);
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 46px;
+      align-items: center;
+    }
+
+    .hero-text {
+      max-width: 680px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .14);
+      border: 1px solid rgba(255, 255, 255, .22);
+      margin-bottom: 24px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .hero h1 {
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: 1.02;
+      font-weight: 900;
+      max-width: 780px;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: clamp(16px, 2vw, 20px);
+      color: #e8f5f6;
+      max-width: 610px;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 0;
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .btn-primary {
+      background: #d7ad51;
+      color: #082b49;
+      box-shadow: 0 18px 40px rgba(215, 173, 81, .32);
+    }
+
+    .btn-primary:hover,
+    .btn-light:hover,
+    .btn-whatsapp:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-light {
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, .35);
+      background: rgba(255, 255, 255, .11);
+    }
+
+    .hero-gallery {
+      display: grid;
+      grid-template-columns: 1fr .75fr;
+      gap: 18px;
+      align-items: end;
+    }
+
+    .hero-photo {
+      overflow: hidden;
+      box-shadow: 0 28px 70px rgba(0, 0, 0, .28);
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-photo.large {
+      height: 520px;
+      border-radius: 44% 56% 38% 62% / 42% 34% 66% 58%;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 18px;
+    }
+
+    .hero-photo.small {
+      height: 230px;
+      border-radius: 36px;
+    }
+
+    .floating-card {
+      padding: 22px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, .94);
+      color: #082b49;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, .2);
+    }
+
+    .floating-card strong {
+      display: block;
+      font-size: 30px;
+      line-height: 1;
+      color: #b78a2c;
+      margin-bottom: 6px;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin: 0 auto 52px;
+      text-align: center;
+    }
+
+    .section-head span {
+      color: #b78a2c;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1.4px;
+    }
+
+    .section-head h2 {
+      color: #082b49;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.12;
+      margin-top: 10px;
+    }
+
+    .section-head p {
+      color: #5c6b78;
+      margin-top: 16px;
+      font-size: 17px;
+    }
+
+    .about {
+      background: #fff;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .about-images {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .about-images img {
+      width: 100%;
+      height: 270px;
+      object-fit: cover;
+      box-shadow: 0 18px 45px rgba(9, 44, 76, .13);
+    }
+
+    .about-images img:nth-child(1) {
+      border-radius: 80px 24px 24px 24px;
+    }
+
+    .about-images img:nth-child(2) {
+      margin-top: 48px;
+      border-radius: 24px 80px 24px 24px;
+    }
+
+    .about-images img:nth-child(3) {
+      grid-column: span 2;
+      height: 230px;
+      border-radius: 24px 24px 90px 90px;
+    }
+
+    .about-text h3 {
+      font-size: clamp(28px, 3.5vw, 42px);
+      line-height: 1.15;
+      color: #082b49;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: #536372;
+      margin-bottom: 18px;
+      font-size: 16px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .feature {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 16px;
+      border-radius: 22px;
+      background: #f5fafb;
+      color: #082b49;
+      font-weight: 800;
+    }
+
+    .feature i {
+      color: #b78a2c;
+    }
+
+    .treatments {
+      background: #f5fafb;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .treatments::before,
+    .treatments::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 90px;
+      background: #fff;
+    }
+
+    .treatments::before {
+      top: -1px;
+      clip-path: ellipse(65% 80% at 50% 0%);
+    }
+
+    .treatments::after {
+      bottom: -1px;
+      clip-path: ellipse(65% 80% at 50% 100%);
+    }
+
+    .services-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 30px;
+      overflow: hidden;
+      box-shadow: 0 18px 45px rgba(9, 44, 76, .09);
+      border: 1px solid rgba(9, 44, 76, .06);
+      transition: .25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 58px rgba(9, 44, 76, .14);
+    }
+
+    .service-card img {
+      height: 190px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .service-content {
+      padding: 24px;
+    }
+
+    .service-icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 16px;
+      background: #082b49;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .service-card h3 {
+      color: #082b49;
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #5f6f7d;
+      font-size: 14px;
+    }
+
+    .experience {
+      background: #fff;
+    }
+
+    .experience-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .experience-panel {
+      padding: 42px;
+      border-radius: 38px;
+      background: #082b49;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .experience-panel h2 {
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .experience-panel p {
+      color: #d9edf0;
+      margin-bottom: 24px;
+    }
+
+    .steps {
+      display: grid;
+      gap: 16px;
+    }
+
+    .step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 18px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, .09);
+    }
+
+    .step strong {
+      color: #f4cc70;
+    }
+
+    .experience-image img {
+      width: 100%;
+      height: 620px;
+      object-fit: cover;
+      border-radius: 40px 140px 40px 40px;
+      box-shadow: 0 22px 60px rgba(9, 44, 76, .18);
+    }
+
+    .gallery {
+      background: #f7fbfc;
+    }
+
+    .photo-strip {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr 1fr;
+      gap: 18px;
+    }
+
+    .photo-strip img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 34px;
+      box-shadow: 0 18px 42px rgba(9, 44, 76, .1);
+    }
+
+    .photo-strip img:nth-child(2) {
+      height: 420px;
+      border-radius: 120px 34px 120px 34px;
+    }
+
+    .contact {
+      background:
+        linear-gradient(135deg, rgba(8, 43, 73, .96), rgba(6, 31, 53, .96)),
+        url("https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1600&q=85");
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .contact::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -1px;
+      height: 100px;
+      background: #f7fbfc;
+      clip-path: ellipse(70% 70% at 50% 0%);
+    }
+
+    .contact .section-head h2,
+    .contact .section-head p,
+    .contact .section-head span {
+      color: #fff;
+    }
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 28px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-info {
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .18);
+      backdrop-filter: blur(14px);
+      padding: 34px;
+      border-radius: 34px;
+    }
+
+    .contact-info h3 {
+      font-size: 25px;
+      color: #f4cc70;
+      margin-bottom: 22px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 18px;
+      color: #eef8f9;
+    }
+
+    .contact-item i {
+      color: #f4cc70;
+      flex: 0 0 auto;
+      margin-top: 2px;
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: #fff;
+      margin-top: 12px;
+      width: 100%;
+    }
+
+    .map {
+      min-height: 430px;
+      border-radius: 34px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, .3);
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    footer {
+      background: #061f35;
+      color: #d8e8ed;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 980px) {
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 78px;
+        background: #fff;
+        display: none;
+        box-shadow: 0 18px 35px rgba(9, 44, 76, .12);
+      }
+
+      nav.active {
+        display: block;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      nav a {
+        display: block;
+        padding: 17px 24px;
+        border-bottom: 1px solid #edf3f5;
+      }
+
+      .nav-cta {
+        border-radius: 0;
+        background: #082b49;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .experience-grid,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-gallery {
+        max-width: 640px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .photo-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-strip img,
+      .photo-strip img:nth-child(2) {
+        height: 300px;
+        border-radius: 30px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .logo {
+        font-size: 17px;
+      }
+
+      .hero {
+        padding-top: 112px;
+      }
+
+      .hero-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-photo.large,
+      .hero-photo.small {
+        height: 300px;
+        border-radius: 32px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .about-images,
+      .features,
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-images img,
+      .about-images img:nth-child(3) {
+        grid-column: auto;
+        height: 260px;
+        border-radius: 30px;
+      }
+
+      .experience-panel,
+      .contact-info {
+        padding: 26px;
+      }
+
+      .experience-image img {
+        height: 360px;
+        border-radius: 32px;
+      }
+
+      section {
+        padding: 72px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container header-content">
+      <a href="#inicio" class="logo">Clínica <span>Elite</span></a>
+
+      <div class="menu-btn" onclick="toggleMenu()">
+        <i data-lucide="menu"></i>
+      </div>
+
+      <nav id="menu">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#tratamentos">Tratamentos</a></li>
+          <li><a href="#experiencia">Experiência</a></li>
+          <li><a href="#contato" class="nav-cta">Agendar avaliação</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <div class="badge">
+            <i data-lucide="sparkles"></i>
+            Odontologia integrada no Canindé
+          </div>
+
+          <h1>Sorrisos naturais, cuidado preciso e atendimento premium.</h1>
+
+          <p>
+            Uma clínica moderna para quem busca saúde bucal, estética dental e segurança
+            em cada detalhe do tratamento.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#contato" class="btn btn-primary">
+              <i data-lucide="calendar-check"></i>
+              Agendar consulta
+            </a>
+
+            <a href="tel:+551132291681" class="btn btn-light">
+              <i data-lucide="phone"></i>
+              Ligar agora
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-gallery">
+          <div class="hero-photo large">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=900&q=85" alt="Paciente em atendimento odontológico">
+          </div>
+
+          <div class="hero-side">
+            <div class="hero-photo small">
+              <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=700&q=85" alt="Consultório odontológico moderno">
+            </div>
+
+            <div class="floating-card">
+              <strong>+ cuidado</strong>
+              Planejamento individual para cada sorriso.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="sobre">
+      <div class="container about-grid">
+        <div class="about-images">
+          <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=700&q=85" alt="Instrumentos odontológicos modernos">
+          <img src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?auto=format&fit=crop&w=700&q=85" alt="Dentista realizando avaliação">
+          <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1000&q=85" alt="Atendimento odontológico humanizado">
+        </div>
+
+        <div class="about-text">
+          <h3>Uma experiência odontológica pensada para você se sentir seguro.</h3>
+
+          <p>
+            A <strong>Clínica Elite - Odontologia Integrada</strong> reúne atendimento humanizado,
+            tecnologia, estética e planejamento personalizado em um ambiente moderno e acolhedor.
+          </p>
+
+          <p>
+            Cada tratamento é conduzido com atenção aos detalhes, buscando equilíbrio entre saúde,
+            função, beleza e naturalidade.
+          </p>
+
+          <div class="features">
+            <div class="feature">
+              <i data-lucide="shield-check"></i>
+              Segurança clínica
+            </div>
+            <div class="feature">
+              <i data-lucide="gem"></i>
+              Estética natural
+            </div>
+            <div class="feature">
+              <i data-lucide="heart-handshake"></i>
+              Atendimento humano
+            </div>
+            <div class="feature">
+              <i data-lucide="scan-face"></i>
+              Planejamento individual
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="treatments" id="tratamentos">
+      <div class="container">
+        <div class="section-head">
+          <span>Especialidades</span>
+          <h2>Tratamentos para transformar saúde, função e estética.</h2>
+          <p>
+            Soluções completas para cuidar do seu sorriso em todas as fases.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=700&q=85" alt="Implantes dentários">
+            <div class="service-content">
+              <div class="service-icon"><i data-lucide="badge-check"></i></div>
+              <h3>Implantes</h3>
+              <p>Reposição dentária com estabilidade, conforto e aparência natural.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1606265752439-1f18756aa9fc?auto=format&fit=crop&w=700&q=85" alt="Clareamento dental">
+            <div class="service-content">
+              <div class="service-icon"><i data-lucide="sparkle"></i></div>
+              <h3>Clareamento</h3>
+              <p>Mais luminosidade para o sorriso com protocolos seguros.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1588776813677-77aaf5595b83?auto=format&fit=crop&w=700&q=85" alt="Ortodontia">
+            <div class="service-content">
+              <div class="service-icon"><i data-lucide="align-center"></i></div>
+              <h3>Ortodontia</h3>
+              <p>Alinhamento dental para melhorar estética, mordida e função.</p>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=700&q=85" alt="Estética dental">
+            <div class="service-content">
+              <div class="service-icon"><i data-lucide="smile"></i></div>
+              <h3>Estética Dental</h3>
+              <p>Harmonização do sorriso com naturalidade e acabamento refinado.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experiencia">
+      <div class="container experience-grid">
+        <div class="experience-panel">
+          <h2>Do primeiro contato ao resultado, tudo é pensado com cuidado.</h2>
+
+          <p>
+            A jornada do paciente é organizada para trazer clareza, confiança e conforto
+            antes, durante e depois do tratamento.
+          </p>
+
+          <div class="steps">
+            <div class="step">
+              <strong>01</strong>
+              <div>
+                <h3>Avaliação completa</h3>
+                <p>Entendemos sua necessidade e analisamos seu sorriso com atenção.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <strong>02</strong>
+              <div>
+                <h3>Plano personalizado</h3>
+                <p>Você recebe uma orientação clara sobre etapas, opções e cuidados.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <strong>03</strong>
+              <div>
+                <h3>Tratamento com acompanhamento</h3>
+                <p>Procedimentos conduzidos com técnica, conforto e previsibilidade.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="experience-image">
+          <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?auto=format&fit=crop&w=900&q=85" alt="Paciente sorrindo em clínica odontológica">
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <div class="container">
+        <div class="section-head">
+          <span>Ambiente</span>
+          <h2>Visual moderno, acolhedor e profissional.</h2>
+          <p>
+            Um espaço preparado para receber você com conforto, privacidade e excelência.
+          </p>
+        </div>
+
+        <div class="photo-strip">
+          <img src="https://images.unsplash.com/photo-1629909615957-be7d94587b19?auto=format&fit=crop&w=900&q=85" alt="Consultório odontológico">
+          <img src="https://images.unsplash.com/photo-1629909615035-bd2a3a2b85de?auto=format&fit=crop&w=900&q=85" alt="Equipamentos odontológicos">
+          <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=85" alt="Dentista atendendo paciente">
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contato">
+      <div class="container">
+        <div class="section-head">
+          <span>Contato</span>
+          <h2>Agende sua avaliação na Clínica Elite.</h2>
+          <p>
+            Fale com nossa equipe e dê o primeiro passo para cuidar do seu sorriso.
+          </p>
+        </div>
+
+        <div class="contact-box">
+          <div class="contact-info">
+            <h3>Clínica Elite - Odontologia Integrada</h3>
+
+            <div class="contact-item">
+              <i data-lucide="map-pin"></i>
+              <p>Av. Cruzeiro do Sul, 248 - Canindé, São Paulo - SP, 03033-020</p>
+            </div>
+
+            <div class="contact-item">
+              <i data-lucide="phone"></i>
+              <p><a href="tel:+551132291681">(11) 3229-1681</a></p>
+            </div>
+
+            <div class="contact-item">
+              <i data-lucide="clock"></i>
+              <p>Segunda a sexta: 08h às 18h<br>Sábado: 08h às 12h</p>
+            </div>
+
+            <a class="btn btn-whatsapp" href="https://wa.me/551132291681?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." target="_blank">
+              <i data-lucide="message-circle"></i>
+              Falar no WhatsApp
+            </a>
+          </div>
+
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps?q=Av.%20Cruzeiro%20do%20Sul,%20248%20-%20Canindé,%20São%20Paulo%20-%20SP,%2003033-020&output=embed"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Clínica Elite - Odontologia Integrada. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("menu").classList.toggle("active");
+    }
+
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", () => {
+        document.getElementById("menu").classList.remove("active");
+      });
+    });
+
+    lucide.createIcons();
+  </script>
+</body>
+</html>
